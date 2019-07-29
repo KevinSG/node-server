@@ -1,0 +1,19 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "node socket",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin SG",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "redis": "^2.8.0",
+    "redis-connection": "^5.4.0",
+    "redis-server": "^1.2.2",
+    "socket.io": "^2.2.0",
+    "vue-socket.io": "^3.0.7"
+  }
+}
