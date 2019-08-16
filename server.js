@@ -9,13 +9,19 @@ server.listen(8890)
 
 //websockets
 
-io.on('connection', (socket) => {
+io.on('connection', function(socket) {
+	
 	console.log('nueva conexion');
-	// var redisClient = redis.createClient();
-	// console.log(redisClient);
-	// redisClient.subscribe('message');
-	// redisClient.on('message', function(channel, message){
-	// 	console.log('nuevo mensaje en: ',channel, message);
-	// });
+
+	var redisClient = redis.createClient();
+	redisClient.subscribe('message');
+	redisClient.on('message', function(channel, message){
+		socket.emit(channel, message);
+	});
+
+	socket.on('disconnect', function() {
+	console.log('usuario desconectado');	
+    redisClient.quit();
+  });
 
 });
