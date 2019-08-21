@@ -5,7 +5,9 @@ var redis = require('redis');
 
 
 // state server
-server.listen(8890)
+server.listen(8890 () => {
+  console.log('Server running');
+});
 
 //websockets
 
