@@ -6,7 +6,7 @@ var port = 8890;
 
 
 // state server
-server.listen(port () => {
+server.listen(port, () => {
   console.log('Server running');
 });
 
