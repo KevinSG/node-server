@@ -3,7 +3,7 @@ Description=Node.js Example Server
 #Requires=After=mysql.service       # Requires the mysql service to run first
 
 [Service]
-ExecStart=/usr/local/bin/node /opt/node_server/server.js
+ExecStart=/usr/bin/node /opt/node_server/server.js
 # Required on some systems
 #WorkingDirectory=/opt/node_server
 Restart=always
