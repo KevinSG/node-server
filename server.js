@@ -2,10 +2,11 @@ var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var redis = require('redis');
+var port = process.env.PORT
 
 
 // state server
-server.listen(8890)
+server.listen(port)
 
 //websockets
 
