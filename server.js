@@ -2,11 +2,14 @@ var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var redis = require('redis');
+
+var host = '172.31.31.204';
 var port = 5002;
 
 
+
 // state server
-server.listen(port, () => {
+server.listen(port, host, () => {
   console.log('Server running');
 });
 
